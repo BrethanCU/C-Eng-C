@@ -15,23 +15,16 @@ void setup() {
   for (int i = 0; i < N; i++) {
     pinMode(ctrl[i], OUTPUT);
   }
+
+  digitalWrite(DIR_A, HIGH);
+  digitalWrite(DIR_B, LOW);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  digitalWrite(DIR_A, HIGH);
-  digitalWrite(DIR_B, LOW);
 
   analogWrite(PWM_A, 127);
-  analogWrite(PWM_B, 65);
+  analogWrite(PWM_B, 127);
 
-  delay(1000);
 
-  digitalWrite(BRAKE_A, HIGH);
-  digitalWrite(BRAKE_B, HIGH);
-  analogWrite(PWM_A, 0);
-  analogWrite(PWM_B, 0);
-
-  digitalWrite(BRAKE_A, LOW);
-  digitalWrite(BRAKE_B, LOW);
 }
