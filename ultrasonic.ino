@@ -30,4 +30,7 @@ void loop() {
   duration = pulseIn(echo, HIGH);
 
   distance = duration * k;
+
+  Serial.print("Distance:");
+  Serial.println(distance);
 }
