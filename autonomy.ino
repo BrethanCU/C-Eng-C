@@ -47,6 +47,7 @@ void setup() {
 bool first = true;
 uint8_t knowns = 0;
 void loop() {
+  while (!digitalRead(4));
 
   analogWrite(PWM_A, 127);
   analogWrite(PWM_B, 127);
