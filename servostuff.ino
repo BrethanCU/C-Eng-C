@@ -20,7 +20,7 @@ void loop() {
 
   delay(1000);
 
-  for (int i = 180; i <= 0; i--) {
+  for (int i = 180; i >= 0; i--) {
     rClaw.write(i);
     lClaw.write(180 - i);
     delay(50);
